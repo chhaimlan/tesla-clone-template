@@ -2,6 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+# deploy hosting
+
+# Clone template tesla website
+
+https://tesla-clone-bdcc9.web.app
+
 In the project directory, you can run:
 
 ### `npm start`
