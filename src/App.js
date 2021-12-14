@@ -1,57 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import Models from "./components/Models";
+import HomeModel from "./components/HomeModel";
+import HomeModel3 from "./components/HomeModel3";
+import HomeModelx from "./components/HomeModelx";
+import Modely from "./components/Modely";
+import Solar from "./components/Solar";
+import SolarPanel from "./components/SolarPanel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Router>
+      <>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/models" element={<HomeModel />} />
+          </Routes>
+          <Routes>
+            <Route path="/model3" element={<HomeModel3 />} />
+          </Routes>
+          <Routes>
+            <Route path="/modelx" element={<HomeModelx />} />
+          </Routes>
+          <Routes>
+            <Route path="/modely" element={<Modely />} />
+          </Routes>
+          <Routes>
+            <Route path="/solar" element={<Solar />} />
+          </Routes>
+          <Routes>
+            <Route path="/solarpanels" element={<SolarPanel />} />
+          </Routes>
+        </div>
+      </>
+    </Router>
   );
 }
 
